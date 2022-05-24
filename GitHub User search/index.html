@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap.min (2).css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bs-component">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html" id="main-href"
+            >Back to Dog's API</a
+          >
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <form class="d-flex">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid">
+      <div class="form-group">
+        <label class="col-form-label mt-4" for="inputDefault"
+          >GitHub's Search</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search for Github profile"
+          id="input-text"
+          style="width: 200px"
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary"
+        style="margin-top: 20px"
+        id="buscar-btn"
+      >
+        Go
+      </button>
+      <div class="container" id="githubDiv"></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
