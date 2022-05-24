@@ -32,7 +32,7 @@ const showBreeds = async () => {
 all_breeds_link.addEventListener('click', showBreeds);
 
 /******************************************************* */
-const printBreeds = (breeds) => {
+const printBreeds = breeds => {
   //breedsDiv.innerHTML = `<div>hola</div>`;
   breedsDiv.classList.remove('hidden');
   specific_picDiv.classList.add('hidden');
@@ -57,7 +57,7 @@ const showRandom = async () => {
   }
 };
 /*-----*/
-const printRandom = (img) => {
+const printRandom = img => {
   breedsDiv.classList.add('hidden');
   specific_picDiv.classList.add('hidden');
   choosebreed_Div.classList.add('hidden');
@@ -84,12 +84,12 @@ const specificBreed = async () => {
 
 /***************************************/
 
-const showSpecificBreed = (african_pics) => {
+const showSpecificBreed = african_pics => {
   breedsDiv.classList.add('hidden');
   specific_picDiv.classList.remove('hidden');
   choosebreed_Div.classList.add('hidden');
   randomDiv.classList.add('hidden');
-  african_pics.forEach((pic) => {
+  african_pics.forEach(pic => {
     console.log(pic);
     specific_picDiv.innerHTML += `
     <div><img class="random_img" src=${pic} alt="Card image"/></div> `;
@@ -107,7 +107,7 @@ african.addEventListener('click', specificBreed);
 /***********FUNCTION CHOOSE YOUR BREED**************/
 /***************************************************/
 
-const chooseYourBreed = async (e) => {
+const chooseYourBreed = async e => {
   e.preventDefault();
   choosebreed_Div.innerHTML = '';
   try {
@@ -125,14 +125,12 @@ const chooseYourBreed = async (e) => {
 };
 
 /****************************************/
-const showInput = (breeds) => {
-  //console.log(razas);
+const showInput = breeds => {
   breedsDiv.classList.add('hidden');
   specific_picDiv.classList.add('hidden');
   choosebreed_Div.classList.remove('hidden');
   randomDiv.classList.add('hidden');
-  breeds.forEach((breed) => {
-    //console.log(raza);
+  breeds.forEach(breed => {
     choosebreed_Div.innerHTML += `<div><img class="random_img" src=${breed} alt="Card image"/></div>`;
   });
 };
